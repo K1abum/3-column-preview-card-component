@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --color-sedans: hsl(31, 77%, 52%);
+    --color-suvs: hsl(184, 100%, 22%);
+    --color-luxury: hsl(179, 100%, 13%);
+    --color-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --color-first: hsl(0, 0%, 95%);
+    --color-footer: hsl(228, 45%, 44%);
+    --font-title: "Big Shoulders Display";
+    --font-main: "Lexend Deca";
+}
+
+/* top right bottom left*/
+/*---------- BODY ----------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-first);
+}
+
+/*---------- CARD ----------*/
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    max-width: 55rem;
+    height: 30rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2.1rem 2.5rem 2.5rem;
+}
+
+/*---------- SET COLORS ----------*/
+.card__sedans,
+.card__button__sedans button {
+    background-color: var(--color-sedans);
+    color: var(--color-sedans);
+}
+
+.card__suvs,
+.card__button__suvs button {
+    background-color: var(--color-suvs);
+    color: var(--color-suvs);
+}
+
+.card__luxury,
+.card__button__luxury button {
+    background-color: var(--color-luxury);
+    color: var(--color-luxury);
+}
+
+/*---------- CARD TITLE ----------*/
+.card__title {
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--color-first);
+    padding-bottom: 0;
+}
+
+/*---------- CARD DESCRIPTION ----------*/
+.card__description {
+    color: var(--color-paragraphs);
+    font-family: var(--font-main);
+    font-size: 15px;
+    padding-right: 0.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+/*---------- BUTTON ----------*/
+
+.card__button {
+    position: relative;
+    width: 100%;
+    padding-top: 5rem;
+}
+
+.card__button button {
+    cursor: pointer;
+    font-family: var(--font-main);
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    background-color: var(--color-first);
+    border-radius: 50px;
+    border: 2px solid;
+}
+
+.card__button__sedans button:hover {
+    border: 2px solid var(--color-first);
+    background-color: var(--color-sedans);
+    color: var(--color-first);
+}
+
+.card__button__suvs button:hover {
+    border: 2px solid var(--color-first);
+    background-color: var(--color-suvs);
+    color: var(--color-first);
+}
+
+.card__button__luxury button:hover {
+    border: 2px solid var(--color-first);
+    background-color: var(--color-luxury);
+    color: var(--color-first);
+}
+
+/*---------- FOOTER ----------*/
+.footer {
+    font-size: 13px;
+    text-align: center;
+    font-family: var(--font-main);
+}
+
+.footer a {
+    color: var(--color-footer);
+}
+
+/*---------- OTHER MEDIAS ----------*/
+
+@media screen and (max-width: 950px) {
+
+    body {
+        margin-top: 4rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card__content {
+        display: flex;
+        padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    .card__button {
+        position: relative;
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+
+}
